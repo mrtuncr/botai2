@@ -43,7 +43,7 @@ function App() {
           className="w-full md:w-2/3 m-auto text-center rounded bg-gray-50 py-2"
         >
           <div className="border-solid border-2">
-            <img src={nutribot} height={200} width={200} className="m-auto"/>
+            <img src={nutribot} height={200} width={200} className="m-auto py-3"/>
             <h1 className="text-2xl text-center mt-2 font-bold">Merhaba, Ben Yapay zeka ile eğitilmiş bir diyetisyen robotuyum.</h1>
             <p><h1 className="text xl text-center">Sağlıklı yaşam için gerekli, ihtiyaca yönelik diyet programlarını, beslenme önerilerini hazırlayabilir ve bunlara yönelik tüm sorularına cevap verebilirim.</h1></p>
           </div>
