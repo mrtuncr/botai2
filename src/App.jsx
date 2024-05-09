@@ -29,7 +29,7 @@ function App() {
       );
     } catch (error) {
       console.log(error);
-      setAnswer("Sorry - Something went wrong. Please try again!");
+      setAnswer("Bir hata oluştu, lütfen yeniden deneyin.");
     }
 
     setGeneratingAnswer(false);
@@ -37,12 +37,12 @@ function App() {
 
   return (
     <>
-      <div className="bg-white h-screen p-3">
+      <div className="bg-white h-lvh p-3 bg-gradient-to-r from-cyan-500 to-blue-500">
         <form
           onSubmit={generateAnswer}
           className="w-full md:w-2/3 m-auto text-center rounded bg-gray-50 py-2"
         >
-          <div className="border-solid border-2">
+          <div>
             <img src={nutribot} height={200} width={200} className="m-auto py-3"/>
             <h1 className="text-2xl text-center mt-2 font-bold">Merhaba, Ben Yapay zeka ile eğitilmiş bir diyetisyen robotuyum.</h1>
             <p><h1 className="text xl text-center">Sağlıklı yaşam için gerekli, ihtiyaca yönelik diyet programlarını, beslenme önerilerini hazırlayabilir ve bunlara yönelik tüm sorularına cevap verebilirim.</h1></p>
@@ -50,7 +50,7 @@ function App() {
           
           <textarea
             required
-            className="border rounded w-full my-2 min-h-fit p-3"
+            className="border rounded w-full my-2 min-h-fit p-2 border-solid border-black"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="Sorunuzu buraya yazınız"
@@ -62,10 +62,10 @@ function App() {
           >
             Gönder
           </button>
-        </form>
         <div className="w-full md:w-2/3 m-auto text-center rounded bg-gray-50 my-1">
           <ReactMarkdown className="p-3">{answer}</ReactMarkdown>
         </div>
+        </form>
       </div>
     </>
   );
